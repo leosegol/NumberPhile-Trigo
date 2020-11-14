@@ -11,7 +11,8 @@ public:
 	float y;
 private:
 	float len;
-
+public:
+	Line();
 	Line(float deg, int sir);
 	float Length(Circle &c);
 	void FindC(Circle &c);
