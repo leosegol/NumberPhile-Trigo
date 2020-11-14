@@ -3,13 +3,13 @@
 class Circle
 {
 public:
-	int func;
+	const int func;
 	float x;
 	float y;
 	float r;
 
 private:
-	float funcs[func];
+	float* funcs;
 	float sin;
 	float cos;
 
