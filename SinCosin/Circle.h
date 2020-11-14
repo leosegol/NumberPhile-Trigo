@@ -1,5 +1,5 @@
 #pragma once
-constexpr auto Rad = 3.14159265358979323846 / 180;
+constexpr float Rad = 3.14159265358979323846 / 180;
 
 class Circle
 {

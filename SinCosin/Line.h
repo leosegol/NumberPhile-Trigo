@@ -10,7 +10,7 @@ public:
 	float x;
 	float y;
 private:
-	float len;
+	double len;
 public:
 	Line();
 	Line(float deg, int sir);
