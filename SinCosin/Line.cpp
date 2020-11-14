@@ -3,6 +3,10 @@
 #include<iostream>
 #include<math.h>
 
+Line::Line()
+{
+}
+
 Line::Line(float deg, int sir) : m(tan(deg*sir*Rad)){}
 
 float Line::Length(Circle &c)

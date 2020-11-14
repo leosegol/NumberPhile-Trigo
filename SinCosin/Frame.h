@@ -9,4 +9,4 @@ struct Point
 	float y;
 };
 
-Point* DataFrame(Circle c);
+Point* DataFrame(Circle &c, int num, Line* lines);
