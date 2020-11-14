@@ -1,15 +1,17 @@
 #include<iostream>
 #include<math.h>
+constexpr auto PI = 3.14159265358979323846;
 #include"Circle.h"
 // x^2 + y^2 = r^2
+// asin(x)*180/3.1415
+Circle::Circle(float r) :r(r), degree(0){}
 
-Circle::Circle(float r) :r(r), x(0), y(0){}
-
-float Circle::SetX(float x)
+void Circle::SetDegrree(float deg)
 {
-	this->x = x;
-	this->y = sqrt(pow(r, 2) - pow(x, 2));
-	return y;
+	degree = deg * PI / 180;
+	x = r * cos(degree);
+	y = r * sin(degree);
 }
 
-float Circle
+
+

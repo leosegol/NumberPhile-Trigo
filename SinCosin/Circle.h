@@ -3,18 +3,16 @@
 class Circle
 {
 public:
-	const int func;
 	float x;
 	float y;
 	float r;
 
 private:
-	float* funcs;
-	float sin;
-	float cos;
+	float degree;
+	float sinP;
+	float cosP;
 
+public:
 	Circle(float r);
-	float SetX(float x);
-	float Getsin();
-	float Getcos();
+	void SetDegrree(float degree);
 };
