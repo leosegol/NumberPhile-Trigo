@@ -3,10 +3,11 @@
 #include"Frame.h"
 #include<iostream>
 
+constexpr auto length = 3;
 
 Point* DataFrame(Circle& c, int num, Line* lines)
 {
-	Point points[30];
+	Point points[length];
 	for (int i = 0; i < num; i++)
 	{
 		lines[i].Length(c);
@@ -20,16 +21,16 @@ Point* DataFrame(Circle& c, int num, Line* lines)
 int main()
 {
 	Circle c = Circle(10);
-	Line lines[30];
+	Line lines[length];
+	std::cout << sizeof lines / sizeof(Line) << std::endl;
 	for (int i = 0; i < sizeof lines/ sizeof(Line); i++)
 		lines[i] = Line(360 / sizeof lines, i);
 	Point* points;
-	int j = 0;
-		c.SetDegrree(0.5 * j);
+		c.SetDegrree(0);
 		std::cout << c.x << ", " << c.y << std::endl;
 		points = DataFrame(c, sizeof lines/ sizeof(Line), lines);
 		// we need to draw points
-			for (int i = 0; i < sizeof lines; i++)
+			for (int i = 0; i < sizeof lines / sizeof(Line); i++)
 			{
 				std::cout << points[i].x << ", " << points[i].y << std::endl;
 			}
