@@ -5,11 +5,10 @@
 
 float rootFurmula(float a, float b, float c, float m, float r);
 
-Line::Line()
-{
-}
+Line::Line(){}
 
-Line::Line(float deg, int sir) : m(tan(deg*sir*Rad)){}
+Line::Line(float deg, int sir) : m(tan(deg*sir*Rad)){} //the slope of a line is tan(angle)
+// where angle is the angle from the positive side of the x axis
 
 float Line::Length(Circle &c)
 {
@@ -21,13 +20,6 @@ float Line::Length(Circle &c)
 
 void Line::FindC(Circle &c)
 {
-	if (len == 0)
-	{
-		this->x = c.x;
-		this->y = c.y;
-		return;
-	}
-
 	float a = 1 + pow(m, 2), b = 2 * c.x -2*c.y*m, n = pow(c.x,2) + pow(c.y, 2) - pow(len, 2);
 	this->x = -rootFurmula(a, b, n, m, c.r);
 	this->y = -m * this->x;
@@ -46,8 +38,6 @@ float rootFurmula(float a, float b, float c, float m, float r)
 		return x2;
 	}
 
-	else if (discriminant == 0) {
-		x1 = -b / (2 * a);
-		return x1;
-	}
+	x1 = -b / (2 * a);
+	return x1;
 }
